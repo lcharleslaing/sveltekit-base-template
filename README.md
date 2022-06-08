@@ -1,38 +1,70 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<h1 align="center"></h1>👋 Welcome 👋</h1>
+<h1 align="center">Sveltekit Base</h1>
 
-## Creating a project
+###Description
 
-If you're seeing this, you've probably already done this step. Congrats!
+Basic Sveltekit project with Auth0, TailwindCSS, Prisma and backed by supabase postgres database
 
-```bash
-# create a new project in the current directory
-npm init svelte
 
-# create a new project in my-app
-npm init svelte my-app
-```
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
-## Developing
+#### 🏠 [Homepage](https://www.iambig2tiny.com)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+#### ✨ [Demo](https://www.iambig2tiny.com)
 
-```bash
-npm run dev
+## Author
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+👤 **[Lee Charles Laing](iambig2tiny#developer@telios.io)**
 
-## Building
+* [Website](https://www.iambig2tiny.com)
+* [Twitter](https://twitter.com/IAmLeeCharles)
+* [Github](https://github.com/lcharleslaing)
+* [LinkedIn](https://linkedin.com/in/Lee-Charles-Laing)
 
-To create a production version of your app:
+## Show your support
 
-```bash
-npm run build
-```
+Give a ⭐️ if this project helped you!
 
-You can preview the production build with `npm run preview`.
+<div align="center">
+  <a href="https://www.patreon.com/iambig2tiny">
+    <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+  </a>
+  <br/>
+</div>
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+### Table of Contents
+- [Project Description](#description)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Installation](#installation)
+- [Questions](#questions)
+- [License](#license)
+
+###Installation
+
+     
+
+###Usage
+
+     
+
+###Contribution
+
+John Henry Doe, Sara Sue Doe
+
+###Questions
+
+[Email me](mailto:iambig2tiny#developer@telios.io)
+[Github](https://github.com/lcharleslaing)
+
+###License
+
+Copy-Right/Copy-Claim 2022 [:Lee-Charles :Laing:](lcharleslaing)<br />
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
+
+_This README was inspired by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
