@@ -2,21 +2,25 @@
 </script>
 
 <script>
-    import { goto } from "$app/navigation";
-
     // @ts-nocheck
+    import { goto } from "$app/navigation";
+    import { user, isAuthenticated } from "$lib/auth/authStore";
+    export let leftIsClosed = true;
+    export let rightIsClosed = true;
+
     const left_menu = [
         { name: "Home", url: "/" },
         { name: "About US", url: "/about" },
         { name: "Contact US", url: "/contact" },
         { name: "Support US", url: "/support" },
     ];
-    import { user, isAuthenticated } from "$lib/auth/authStore";
 
-    export let leftIsClosed = true;
-    export let rightIsClosed = true;
+    const right_menu = [
+        { name: "Something", url: "/" },
+        { name: "Something Else", url: "/" },
+    ];
 
-    const closeLeftDrawer = () => {
+    const closeDrawers = () => {
         leftIsClosed = true;
         rightIsClosed = true;
     };
@@ -26,7 +30,8 @@
     <div class="flex-none">
         <button
             on:click={() => {
-                leftIsClosed = !leftIsClosed;
+                leftIsClosed = false;
+                rightIsClosed = true;
             }}
             class="btn btn-square btn-ghost"
         >
@@ -49,7 +54,7 @@
             <span class="">
                 <img src="/big2tiny-logo.svg" alt="" class="w-8" />
             </span>
-            <span class="mx-2">IAMBIG2TINY</span>
+            <span class="mx-2 text-sm">Sveltekit/Auth0/Prisma/Supabase</span>
         </a>
     </div>
 
@@ -78,9 +83,10 @@
     <div class="flex-none">
         <button
             on:click={() => {
-                rightIsClosed = !rightIsClosed;
+                rightIsClosed = false;
+                leftIsClosed = true;
             }}
-            class="hidden btn btn-square btn-ghost"
+            class="btn btn-square btn-ghost"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +105,7 @@
 </div>
 
 <div
-    on:click={closeLeftDrawer}
+    on:click={closeDrawers}
     class:hidden={leftIsClosed}
     class="fixed left-0 top-0 bg-gray-300 w-screen h-screen opacity-60 -z-10"
 />
@@ -107,14 +113,14 @@
     class:hidden={leftIsClosed}
     class="fixed my-0 w-60 h-screen bg-white shadow mt-0.5 -z-0"
 >
-    <div class="text-center font-bold pt-4">Menu</div>
+    <div class="text-center font-bold pt-4">Left Menu</div>
     <ul class="ml-6">
         {#each left_menu as item}
             <li class="my-2">
                 <a
                     on:click={() => {
                         goto(item.url);
-                        closeLeftDrawer();
+                        closeDrawers();
                     }}
                     href={item.url}>{item.name}</a
                 >
@@ -124,23 +130,23 @@
 </div>
 
 <div
-    on:click={closeLeftDrawer}
+    on:click={closeDrawers}
     class:hidden={rightIsClosed}
     class="fixed left-0 top-0 bg-gray-300 w-screen h-screen opacity-60 -z-10"
 />
 
 <div
     class:hidden={rightIsClosed}
-    class="fixed my-0 w-60 h-screen bg-white shadow mt-0.5 -z-0"
+    class="fixed right-0 my-0 w-60 h-screen bg-white shadow mt-0.5 -z-0"
 >
-    <div class="text-center font-bold pt-4">Menu</div>
+    <div class="text-center font-bold pt-4">Right Menu</div>
     <ul class="ml-6">
-        {#each left_menu as item}
+        {#each right_menu as item}
             <li class="my-2">
                 <a
                     on:click={() => {
                         goto(item.url);
-                        closeLeftDrawer();
+                        closeDrawers();
                     }}
                     href={item.url}>{item.name}</a
                 >
