@@ -12,7 +12,7 @@
         btn_logout_text=""
         imgSrcLogin="/feather/log-in.svg"
         imgSrcLogout="/feather/log-out.svg"
-        iconSize="w-5"
+        iconSize="w-8"
         _class="m-2 btn btn-ghost text-slate-900"
     />
 </NavbarAuth0>

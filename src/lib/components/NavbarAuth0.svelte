@@ -52,9 +52,9 @@
     <div class="flex-1">
         <a href="/" class="btn btn-ghost normal-case text-xl">
             <span class="">
-                <img src="/big2tiny-logo.svg" alt="" class="w-8" />
+                <img src="/big2tiny-logo.svg" alt="" class="w-12" />
             </span>
-            <span class="mx-2 text-sm">Sveltekit/Auth0/Prisma/Supabase</span>
+            <span class="mx-2 text-2xl">DeCoder-Pro</span>
         </a>
     </div>
 
